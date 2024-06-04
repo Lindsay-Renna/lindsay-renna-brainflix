@@ -1,0 +1,26 @@
+@use "../../styles/partials/variables" as *;
+
+form {
+	display: inline-block;
+	margin-right: 1rem;
+	width: 82%;
+
+	.search-field {
+		display: flex;
+
+		border: 1px solid $SecondaryGreyMercury;
+		border-radius: 4px;
+		background-color: $SecondaryWhiteAlabaster;
+
+		img {
+			padding-left: 0.5rem;
+		}
+
+		input {
+			padding: 0.625rem;
+			border: none;
+			background-color: $SecondaryWhiteAlabaster;
+			color: $BrainFlixBlack;
+		}
+	}
+}

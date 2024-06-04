@@ -1,11 +1,10 @@
 import "./App.scss";
+import HeaderNav from "./components/HeaderNav/HeaderNav";
 
 function App() {
 	return (
 		<>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
+			<HeaderNav />
 		</>
 	);
 }

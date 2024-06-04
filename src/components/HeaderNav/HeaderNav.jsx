@@ -1,16 +1,27 @@
 import React from "react";
+import SearchBar from "../SearchBar/SearchBar";
+import "./HeaderNav.scss";
 
 function HeaderNav() {
 	return (
-		<div>
-			<img
-				src="../../assets/imges/logo/BrainFlix-logo.svg"
-				alt="Brainflix Logo"
-			/>
+		<header>
+			<div className="image-wrapper">
+				<img
+					src="src/assets/images/logo/BrainFlix-logo.svg"
+					alt="Brainflix Logo"
+				/>
+			</div>
 			<SearchBar />
-			<UploadButton />
-			<img src="../../assets/imges/Mohan-muruge.jpg" alt="" />
-		</div>
+			<img
+				className="user-image"
+				src="src/assets/images/Mohan-muruge.jpg"
+				alt="user profile image"
+			/>
+			<div className="upload-button">
+				<img src="src/assets/images/icons/upload.svg" alt="upload arrow" />
+				<p>UPLOAD</p>
+			</div>
+		</header>
 	);
 }
 export default HeaderNav;
