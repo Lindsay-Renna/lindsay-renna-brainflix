@@ -1,4 +1,3 @@
-import React from "react";
 import "./VideoDetails.scss";
 import moment from "moment";
 
@@ -24,7 +23,7 @@ function formatDate(milliseconds) {
 	return formattedDate;
 }
 
-function VideoDetails() {
+function VideoDetails({ details }) {
 	return (
 		<div className="video-details">
 			<h1>{data.title}</h1>

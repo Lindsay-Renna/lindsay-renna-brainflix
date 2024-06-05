@@ -5,22 +5,24 @@ import "./HeaderNav.scss";
 function HeaderNav() {
 	return (
 		<header>
-			<div className="image-wrapper">
+			<nav>
+				<div className="image-wrapper">
+					<img
+						src="src/assets/images/logo/BrainFlix-logo.svg"
+						alt="Brainflix Logo"
+					/>
+				</div>
+				<SearchBar />
 				<img
-					src="src/assets/images/logo/BrainFlix-logo.svg"
-					alt="Brainflix Logo"
+					className="user-image"
+					src="src/assets/images/Mohan-muruge.jpg"
+					alt="user profile image"
 				/>
-			</div>
-			<SearchBar />
-			<img
-				className="user-image"
-				src="src/assets/images/Mohan-muruge.jpg"
-				alt="user profile image"
-			/>
-			<div className="upload-button">
-				<img src="src/assets/images/icons/upload.svg" alt="upload arrow" />
-				<p>UPLOAD</p>
-			</div>
+				<div className="upload-button">
+					<img src="src/assets/images/icons/upload.svg" alt="upload arrow" />
+					<p>UPLOAD</p>
+				</div>
+			</nav>
 		</header>
 	);
 }
