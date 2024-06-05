@@ -1,10 +1,10 @@
 import "./VideoItem.scss";
 
-function VideoItem({ id, title, author, imageUrl }) {
+function VideoItem({ id, title, author, imageUrl, changeSelectedVideo }) {
 	return (
 		<li
 			className="video-list__item"
-			onclick={() => {
+			onClick={() => {
 				changeSelectedVideo(id);
 			}}
 		>
