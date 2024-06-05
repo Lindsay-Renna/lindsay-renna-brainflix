@@ -1,0 +1,40 @@
+@use "../../styles/partials/variables" as *;
+
+.video-details {
+	margin: 1rem;
+
+	.video-stats {
+		border-top: 1px solid $SecondaryGreyMercury;
+		border-bottom: 1px solid $SecondaryGreyMercury;
+		display: flex;
+		color: $PrimaryGreySilver;
+
+		.channel-timestamp {
+			width: 55%;
+
+			h3 {
+				color: $BrainFlixBlack;
+			}
+		}
+
+		.likes-views {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+
+			.views-wrapper,
+			.likes-wrapper {
+				display: flex;
+				gap: 0.5rem;
+			}
+		}
+	}
+
+	.video-description {
+		font-weight: 600;
+	}
+
+	.comment-count {
+		font-weight: 700;
+	}
+}
