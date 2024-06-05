@@ -1,0 +1,14 @@
+@use "../../styles/partials/variables" as *;
+
+.video-list {
+	margin: 1rem;
+
+	.video-list__header {
+		color: $PrimaryGreySilver;
+		font-weight: 600;
+	}
+
+	ul {
+		padding: 0;
+	}
+}

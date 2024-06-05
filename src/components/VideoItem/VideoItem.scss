@@ -1,0 +1,25 @@
+.video-list__item {
+	display: flex;
+	gap: 1rem;
+	margin: 0.875rem 0;
+	cursor: pointer;
+
+	img {
+		width: 35%;
+		border-radius: 5px;
+	}
+	.item-details {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		h5 {
+			font-size: 0.8125rem;
+			margin: 0;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+}
