@@ -1,5 +1,38 @@
-@use "./styles/partials/global" as *;
 @use "./styles/partials/mixins" as *;
+@use "./styles/partials/fonts" as *;
+@use "./styles/partials/variables" as *;
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "AvenirNext", Verdana, Geneva, Tahoma, sans-serif;
+	color: $BrainFlixBlack;
+	font-size: 0.8125rem;
+	line-height: 1.125rem;
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 0.75rem;
+	line-height: 1.25rem;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 0.8125rem;
+	line-height: 1.125rem;
+	font-weight: 700;
+}
+
+a {
+	text-decoration: none;
+}
 
 .user-image {
 	@include user-image;
