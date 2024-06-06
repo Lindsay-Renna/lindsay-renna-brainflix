@@ -12,12 +12,14 @@ function HeaderNav() {
 						alt="Brainflix Logo"
 					/>
 				</div>
-				<SearchBar />
-				<img
-					className="user-image"
-					src="src/assets/images/Mohan-muruge.jpg"
-					alt="user profile image"
-				/>
+				<div className="search-bar-wrapper">
+					<SearchBar />
+					<img
+						className="user-image"
+						src="src/assets/images/Mohan-muruge.jpg"
+						alt="user profile image"
+					/>
+				</div>
 				<div className="upload-button">
 					<img src="src/assets/images/icons/upload.svg" alt="upload arrow" />
 					<p>UPLOAD</p>

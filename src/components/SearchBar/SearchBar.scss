@@ -1,14 +1,11 @@
-@use "../../styles/partials/variables" as *;
-@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global" as *;
 
 form {
-	display: inline-block;
 	margin-right: 1rem;
-	width: 82%;
+	flex-grow: 1;
 
 	.search-field {
 		display: flex;
-
 		border: 1px solid $SecondaryGreyMercury;
 		border-radius: 4px;
 		background-color: $SecondaryWhiteAlabaster;
@@ -18,11 +15,16 @@ form {
 		}
 
 		input {
+			flex-grow: 1;
 			padding: 0.625rem;
 			border: none;
 			background-color: $SecondaryWhiteAlabaster;
 			color: $BrainFlixBlack;
 			font-family: "AvenirNext", Verdana, Geneva, Tahoma, sans-serif;
+
+			&:focus {
+				outline: none;
+			}
 		}
 	}
 }

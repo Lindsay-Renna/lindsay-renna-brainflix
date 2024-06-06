@@ -3,7 +3,7 @@ import "./VideoList.scss";
 
 function VideoList({ details, changeSelectedVideo }) {
 	return (
-		<div className="video-list">
+		<aside className="video-list">
 			<h4 className="video-list__header">NEXT VIDEOS</h4>
 			<ul>
 				{details.map((detail) => {
@@ -19,7 +19,7 @@ function VideoList({ details, changeSelectedVideo }) {
 					);
 				})}
 			</ul>
-		</div>
+		</aside>
 	);
 }
 

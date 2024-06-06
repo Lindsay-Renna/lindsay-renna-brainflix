@@ -1,6 +1,6 @@
 import "./VideoPlayer.scss";
 
-function VideoPlayer() {
+function VideoPlayer({ video }) {
 	return (
 		<div className="video-container">
 			<video controls poster="src/assets/images/Upload-video-preview.jpg">

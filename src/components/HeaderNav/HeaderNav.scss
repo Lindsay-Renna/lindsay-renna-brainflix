@@ -1,4 +1,4 @@
-@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
 
 header {
 	margin: 0.875rem;
@@ -6,6 +6,9 @@ header {
 	.image-wrapper {
 		text-align: center;
 		margin-bottom: 0.875rem;
+	}
+	.search-bar-wrapper {
+		display: flex;
 	}
 
 	.upload-button {
