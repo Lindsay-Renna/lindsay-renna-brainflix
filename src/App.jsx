@@ -25,7 +25,10 @@ function App() {
 		<>
 			<HeaderNav />
 			<main>
-				<VideoPlayer video={selectedVideo.video} />
+				<VideoPlayer
+					video={selectedVideo.video}
+					preview={selectedVideo.image}
+				/>
 				<VideoDetails
 					title={selectedVideo.title}
 					author={selectedVideo.channel}

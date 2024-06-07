@@ -1,0 +1,41 @@
+@use "../../styles/partials/global" as *;
+
+.comments-list {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid $SecondaryGreyMercury;
+
+	.comment {
+		display: flex;
+		gap: 1rem;
+		border-top: 1px solid $SecondaryGreyMercury;
+
+		&__image {
+			background-color: $SecondaryGreyMercury;
+			border-radius: 50%;
+			width: 2.25rem;
+			height: 2.25rem;
+			margin-top: 1rem;
+		}
+
+		&__info {
+			display: flex;
+			flex-wrap: wrap;
+
+			.comment__name {
+				width: 50%;
+				margin: 1rem 0 0 0;
+			}
+
+			.comment__date {
+				flex-grow: 1;
+				text-align: right;
+				color: $PrimaryGreySilver;
+			}
+
+			.comment__comment {
+				margin-top: 0;
+			}
+		}
+	}
+}

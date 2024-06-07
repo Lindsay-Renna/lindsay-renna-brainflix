@@ -3,7 +3,7 @@ import "./CommentSection.scss";
 
 function CommentSection({ comments }) {
 	return (
-		<section>
+		<section className="comment-section">
 			{/* <NewComments /> */}
 			<CommentsList comments={comments} />
 		</section>

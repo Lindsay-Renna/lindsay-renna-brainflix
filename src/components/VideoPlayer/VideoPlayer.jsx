@@ -1,9 +1,9 @@
 import "./VideoPlayer.scss";
 
-function VideoPlayer({ video }) {
+function VideoPlayer({ video, preview }) {
 	return (
 		<div className="video-container">
-			<video controls poster="src/assets/images/Upload-video-preview.jpg">
+			<video controls poster={preview}>
 				Your browser does not support the video tag.
 			</video>
 		</div>
