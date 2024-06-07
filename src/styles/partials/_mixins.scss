@@ -30,3 +30,11 @@
 	object-fit: cover;
 	object-position: 5%;
 }
+
+@mixin blue-button {
+	background-color: $BrainFlixBlue;
+	color: $PrimaryWhite;
+	display: flex;
+	border-radius: 4px;
+	margin-top: 0.625rem;
+}
