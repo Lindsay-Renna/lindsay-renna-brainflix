@@ -19,10 +19,10 @@ function HeaderNav() {
 						src="src/assets/images/Mohan-muruge.jpg"
 						alt="user profile image"
 					/>
-				</div>
-				<div className="upload-button">
-					<img src="src/assets/images/icons/upload.svg" alt="upload arrow" />
-					<p>UPLOAD</p>
+					<div className="upload-button">
+						<img src="src/assets/images/icons/upload.svg" alt="upload arrow" />
+						<p>UPLOAD</p>
+					</div>
 				</div>
 			</nav>
 		</header>
