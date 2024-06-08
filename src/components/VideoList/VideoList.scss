@@ -3,9 +3,17 @@
 .video-list {
 	margin: 1rem;
 
+	@include tablet {
+		margin: 1rem 2rem;
+	}
+
 	.video-list__header {
 		color: $PrimaryGreySilver;
 		font-weight: 600;
+
+		@include tablet {
+			font-size: 0.75rem;
+		}
 	}
 
 	ul {
