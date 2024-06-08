@@ -18,7 +18,7 @@ function VideoDetails({
 }) {
 	return (
 		<div className="video-details">
-			<h1>{title}</h1>
+			<h1 className="video-details__header">{title}</h1>
 			<div className="video-stats">
 				<div className="channel-timestamp">
 					<h3 className="channel">By {author}</h3>

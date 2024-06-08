@@ -3,17 +3,45 @@
 .video-details {
 	margin: 1rem;
 
+	@include tablet {
+		margin: 1rem 2rem 0 2rem;
+	}
+
+	&__header {
+		@include tablet {
+			margin-bottom: 0;
+		}
+	}
+
 	.video-stats {
 		border-top: 1px solid $SecondaryGreyMercury;
 		border-bottom: 1px solid $SecondaryGreyMercury;
 		display: flex;
 		color: $PrimaryGreySilver;
+		font-size: 0.75rem;
+
+		@include tablet {
+			border-top: none;
+			justify-content: space-between;
+		}
 
 		.channel-timestamp {
 			width: 55%;
 
+			@include tablet {
+				display: flex;
+				gap: 2rem;
+			}
+
 			h3 {
 				color: $BrainFlixBlack;
+				margin: 0.5rem 0;
+			}
+
+			.timestamp {
+				@include tablet {
+					margin: 0.5rem 0;
+				}
 			}
 		}
 
@@ -22,14 +50,26 @@
 			flex-direction: column;
 			justify-content: space-evenly;
 
+			@include tablet {
+				flex-direction: row;
+				align-items: flex-start;
+				gap: 2rem;
+			}
+
 			.views-wrapper,
 			.likes-wrapper {
 				display: flex;
 				gap: 0.5rem;
+				margin: 0.5rem 0;
+				text-align: center;
 			}
 		}
 	}
-
+	.video-description {
+		@include tablet {
+			margin: 1.5rem 0;
+		}
+	}
 	.comment-count {
 		font-weight: 700;
 	}

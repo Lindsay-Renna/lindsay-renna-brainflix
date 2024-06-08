@@ -1,3 +1,9 @@
+@use "../../styles/partials/global" as *;
+
 .comment-section {
 	margin: 1rem;
+
+	@include tablet {
+		margin: 1rem 2rem;
+	}
 }

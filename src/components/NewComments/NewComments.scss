@@ -5,19 +5,42 @@
 	display: flex;
 	gap: 1rem;
 
+	@include tablet {
+		margin-bottom: 1.5rem;
+	}
+
 	.user-image-container {
+		@include tablet {
+			display: flex;
+			align-items: flex-end;
+		}
+
 		img {
 			margin-top: 1rem;
+
+			@include tablet {
+				width: 2.5rem;
+				height: 2.5rem;
+			}
 		}
 	}
 
 	.form-wrapper {
 		flex-grow: 1;
 
+		@include tablet {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
 		h2 {
 			color: $PrimaryGreySilver;
 			font-weight: 600;
 			margin: 0;
+
+			@include tablet {
+				width: 100%;
+			}
 		}
 
 		form {
@@ -32,6 +55,12 @@
 				border-color: $SecondaryGreyMercury;
 				border-radius: 4px;
 				padding: 0.5rem 0 0 0.5rem;
+
+				@include tablet {
+					min-height: 1rem;
+					max-height: 2.5rem;
+					padding: 0.75rem 0 0 0.5rem;
+				}
 
 				&:focus {
 					border: 2px solid $BrainFlixBlue;
@@ -52,6 +81,12 @@
 				border: none;
 				padding: 0.5rem 0.75rem 0.25rem 0.75rem;
 				width: 100%;
+
+				@include tablet {
+					margin: 0 0 0 1.5rem;
+					width: 35%;
+					max-width: 170px;
+				}
 
 				img {
 					width: 1.25rem;
