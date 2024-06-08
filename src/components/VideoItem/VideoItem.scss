@@ -5,6 +5,7 @@
 	gap: 1rem;
 	margin: 0.875rem 0;
 	cursor: pointer;
+	max-width: 31.25rem;
 
 	@include tablet {
 		width: 20rem;
