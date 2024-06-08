@@ -24,26 +24,28 @@ function App() {
 	return (
 		<>
 			<HeaderNav />
+
+			<VideoPlayer video={selectedVideo.video} preview={selectedVideo.image} />
 			<main>
-				<VideoPlayer
-					video={selectedVideo.video}
-					preview={selectedVideo.image}
-				/>
-				<VideoDetails
-					title={selectedVideo.title}
-					author={selectedVideo.channel}
-					viewCount={selectedVideo.views}
-					likeCount={selectedVideo.likes}
-					timestamp={selectedVideo.timestamp}
-					commentCount={selectedVideo.comments.length}
-					description={selectedVideo.description}
+				<section>
+					<VideoDetails
+						title={selectedVideo.title}
+						author={selectedVideo.channel}
+						viewCount={selectedVideo.views}
+						likeCount={selectedVideo.likes}
+						timestamp={selectedVideo.timestamp}
+						commentCount={selectedVideo.comments.length}
+						description={selectedVideo.description}
+					/>
+
+					<CommentSection comments={selectedVideo.comments} />
+				</section>
+
+				<VideoList
+					details={filteredVideos}
+					changeSelectedVideo={changeSelectedVideo}
 				/>
 			</main>
-			<CommentSection comments={selectedVideo.comments} />
-			<VideoList
-				details={filteredVideos}
-				changeSelectedVideo={changeSelectedVideo}
-			/>
 		</>
 	);
 }

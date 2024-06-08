@@ -7,6 +7,13 @@
 		margin: 1rem 2rem;
 	}
 
+	@include desktop {
+		padding: 1rem 0 2rem 1.5rem;
+		margin: 0;
+		border-left: 1px solid $PrimaryGreySilver;
+		width: 40%;
+	}
+
 	.video-list__header {
 		color: $PrimaryGreySilver;
 		font-weight: 600;

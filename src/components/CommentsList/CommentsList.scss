@@ -10,12 +10,21 @@
 		gap: 1rem;
 		border-top: 1px solid $SecondaryGreyMercury;
 
+		@include desktop {
+			padding-right: 1.5rem;
+		}
+
 		&__image {
 			background-color: $SecondaryGreyMercury;
 			border-radius: 50%;
 			width: 2.25rem;
 			height: 2.25rem;
 			margin-top: 1rem;
+
+			@include tablet {
+				width: 2.5rem;
+				height: 2.5rem;
+			}
 		}
 
 		&__info {

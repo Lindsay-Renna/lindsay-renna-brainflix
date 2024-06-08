@@ -9,10 +9,18 @@
 		margin-bottom: 1.5rem;
 	}
 
+	@include desktop {
+		padding-right: 1.5rem;
+	}
+
 	.user-image-container {
 		@include tablet {
 			display: flex;
 			align-items: flex-end;
+		}
+
+		@include tablet {
+			margin-right: 1.25rem;
 		}
 
 		img {

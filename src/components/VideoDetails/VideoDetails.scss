@@ -7,6 +7,11 @@
 		margin: 1rem 2rem 0 2rem;
 	}
 
+	@include desktop {
+		margin-right: 0;
+		// padding-right: 2rem;
+	}
+
 	&__header {
 		@include tablet {
 			margin-bottom: 0;
@@ -23,6 +28,10 @@
 		@include tablet {
 			border-top: none;
 			justify-content: space-between;
+		}
+
+		@include desktop {
+			padding-right: 1.5rem;
 		}
 
 		.channel-timestamp {
@@ -68,6 +77,10 @@
 	.video-description {
 		@include tablet {
 			margin: 1.5rem 0;
+		}
+
+		@include desktop {
+			padding-right: 1.5rem;
 		}
 	}
 	.comment-count {
