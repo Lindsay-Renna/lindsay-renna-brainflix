@@ -29,6 +29,7 @@ header {
 
 			@include desktop {
 				width: 51%;
+				padding-top: 0.5rem;
 			}
 		}
 		.search-bar-wrapper {
@@ -58,6 +59,7 @@ header {
 				@include blue-button;
 				min-width: 90%;
 				flex-grow: 2;
+				margin-top: 1rem;
 
 				@include tablet {
 					min-width: min-content;
@@ -82,7 +84,7 @@ header {
 				p {
 					margin: 0;
 					flex-grow: 1;
-					padding: 0.875rem 0 0.625rem 0;
+					padding: 0.875rem 1.54rem 0.625rem 0;
 					width: 80%;
 					text-align: center;
 					font-size: 0.6875rem;

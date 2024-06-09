@@ -5,13 +5,22 @@
 	flex-direction: column;
 	border-bottom: 1px solid $SecondaryGreyMercury;
 
+	@include desktop {
+		border-bottom: none;
+	}
+
 	.comment {
 		display: flex;
 		gap: 1rem;
 		border-top: 1px solid $SecondaryGreyMercury;
 
+		@include tablet {
+			gap: 1.5rem;
+		}
+
 		@include desktop {
 			padding-right: 1.5rem;
+			gap: 2rem;
 		}
 
 		&__image {
@@ -24,6 +33,11 @@
 			@include tablet {
 				width: 2.5rem;
 				height: 2.5rem;
+				margin-top: 1.5rem;
+
+				@include desktop {
+					margin-top: 1.25rem;
+				}
 			}
 		}
 
@@ -34,16 +48,29 @@
 			.comment__name {
 				width: 50%;
 				margin: 1rem 0 0 0;
+
+				@include tablet {
+					padding-top: 0.25rem;
+				}
 			}
 
 			.comment__date {
 				flex-grow: 1;
 				text-align: right;
 				color: $PrimaryGreySilver;
+
+				@include tablet {
+					padding-top: 0.25rem;
+					margin-bottom: 0;
+				}
 			}
 
 			.comment__comment {
 				margin-top: 0;
+
+				@include tablet {
+					margin-bottom: 1.25rem;
+				}
 			}
 		}
 	}
