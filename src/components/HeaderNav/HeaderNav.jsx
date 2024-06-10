@@ -1,16 +1,19 @@
 import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import "./HeaderNav.scss";
+import { Link } from "react-router-dom";
 
 function HeaderNav() {
 	return (
 		<header>
 			<nav>
 				<div className="image-wrapper">
-					<img
-						src="src/assets/images/logo/BrainFlix-logo.svg"
-						alt="Brainflix Logo"
-					/>
+					<Link to="/">
+						<img
+							src="src/assets/images/logo/BrainFlix-logo.svg"
+							alt="Brainflix Logo"
+						/>
+					</Link>
 				</div>
 				<div className="search-bar-wrapper">
 					<SearchBar />

@@ -1,11 +1,10 @@
+import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import "./App.scss";
-import CommentSection from "./components/CommentSection/CommentSection";
-import HeaderNav from "./components/HeaderNav/HeaderNav";
-import VideoDetails from "./components/VideoDetails/VideoDetails";
-import VideoList from "./components/VideoList/VideoList";
-import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 import videos from "./data/video-details.json";
 import { useState } from "react";
+import HomePage from "./pages/HomePage/HomePage";
+import UploadPage from "./pages/UploadPage/UploadPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
 	const [selectedVideo, setSelectedVideo] = useState(videos[0]);
@@ -23,29 +22,14 @@ function App() {
 
 	return (
 		<>
-			<HeaderNav />
-
-			<VideoPlayer video={selectedVideo.video} preview={selectedVideo.image} />
-			<main>
-				<section>
-					<VideoDetails
-						title={selectedVideo.title}
-						author={selectedVideo.channel}
-						viewCount={selectedVideo.views}
-						likeCount={selectedVideo.likes}
-						timestamp={selectedVideo.timestamp}
-						commentCount={selectedVideo.comments.length}
-						description={selectedVideo.description}
-					/>
-
-					<CommentSection comments={selectedVideo.comments} />
-				</section>
-
-				<VideoList
-					details={filteredVideos}
-					changeSelectedVideo={changeSelectedVideo}
-				/>
-			</main>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<HomePage />} />
+					<Route path="/videos/:videoId" element={<HomePage />} />
+					<Route path="/upload-page" element={<UploadPage />} />
+					<Route path="/*" element={<NotFoundPage />} />
+				</Routes>
+			</BrowserRouter>
 		</>
 	);
 }

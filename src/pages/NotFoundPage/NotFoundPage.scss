@@ -1,0 +1,11 @@
+@use "../../styles/partials/global" as *;
+
+.error-wrapper {
+	@include flex-center-both;
+	flex-direction: column;
+	height: 50vw;
+
+	img {
+		width: 20rem;
+	}
+}
