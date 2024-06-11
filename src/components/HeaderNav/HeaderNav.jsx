@@ -10,7 +10,7 @@ function HeaderNav() {
 				<div className="image-wrapper">
 					<Link to="/">
 						<img
-							src="src/assets/images/logo/BrainFlix-logo.svg"
+							src="/src/assets/images/logo/BrainFlix-logo.svg"
 							alt="Brainflix Logo"
 						/>
 					</Link>
@@ -19,11 +19,11 @@ function HeaderNav() {
 					<SearchBar />
 					<img
 						className="user-image"
-						src="src/assets/images/Mohan-muruge.jpg"
+						src="/src/assets/images/Mohan-muruge.jpg"
 						alt="user profile image"
 					/>
 					<div className="upload-button">
-						<img src="src/assets/images/icons/upload.svg" alt="upload arrow" />
+						<img src="/src/assets/images/icons/upload.svg" alt="upload arrow" />
 						<p>UPLOAD</p>
 					</div>
 				</div>

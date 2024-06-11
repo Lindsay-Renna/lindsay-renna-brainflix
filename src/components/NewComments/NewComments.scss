@@ -65,6 +65,7 @@
 				border-color: $SecondaryGreyMercury;
 				border-radius: 4px;
 				padding: 0.5rem 0 0 0.5rem;
+				resize: none;
 
 				@include tablet {
 					min-height: 1rem;

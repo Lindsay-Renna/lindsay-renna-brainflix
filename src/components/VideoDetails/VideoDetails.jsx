@@ -28,14 +28,14 @@ function VideoDetails({
 				<div className="likes-views">
 					<div className="views-wrapper">
 						<div className="image-wrapper">
-							<img src="src/assets/images/icons/views.svg" alt="view icon" />
+							<img src="/src/assets/images/icons/views.svg" alt="view icon" />
 						</div>
 						<div className="views">{viewCount}</div>
 					</div>
 
 					<div className="likes-wrapper">
 						<div className="image-wrapper">
-							<img src="src/assets/images/icons/likes.svg" alt="like icon" />
+							<img src="/src/assets/images/icons/likes.svg" alt="like icon" />
 						</div>
 						<div className="like-count">{likeCount}</div>
 					</div>

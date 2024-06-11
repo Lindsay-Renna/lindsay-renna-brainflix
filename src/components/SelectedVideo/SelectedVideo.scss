@@ -1,0 +1,9 @@
+@use "../../styles/partials/global" as *;
+
+main {
+	@include desktop {
+		display: inline-flex;
+		width: 57.35%;
+		margin-left: 5.75rem;
+	}
+}

@@ -1,36 +1,44 @@
 import "./HomePage.scss";
-import CommentSection from "../../components/CommentSection/CommentSection";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { getVideoListEndpoint } from "../../utilities/api_util";
 import HeaderNav from "../../components/HeaderNav/HeaderNav";
-import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import VideoList from "../../components/VideoList/VideoList";
-import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
+import SelectedVideo from "../../components/SelectedVideo/SelectedVideo";
 
 function HomePage() {
+	const [videos, setVideos] = useState([]);
+	const { videoId } = useParams();
+
+	async function getVideos() {
+		try {
+			let result = await axios.get(getVideoListEndpoint());
+			setVideos(result.data);
+		} catch (error) {
+			console.log(error);
+		}
+	}
+
+	useEffect(() => {
+		getVideos();
+	}, []);
+
+	if (videos.length < 1) {
+		return <p>loading...</p>;
+	}
+
+	const selectedVideoId = videoId || videos[0].id;
+
+	const filteredVideos = videos.filter((video) => {
+		return selectedVideoId !== video.id;
+	});
+
 	return (
 		<>
 			<HeaderNav />
-
-			<VideoPlayer video={selectedVideo.video} preview={selectedVideo.image} />
-			<main>
-				<section>
-					<VideoDetails
-						title={selectedVideo.title}
-						author={selectedVideo.channel}
-						viewCount={selectedVideo.views}
-						likeCount={selectedVideo.likes}
-						timestamp={selectedVideo.timestamp}
-						commentCount={selectedVideo.comments.length}
-						description={selectedVideo.description}
-					/>
-
-					<CommentSection comments={selectedVideo.comments} />
-				</section>
-
-				<VideoList
-					details={filteredVideos}
-					changeSelectedVideo={changeSelectedVideo}
-				/>
-			</main>
+			<SelectedVideo selectedVideoId={selectedVideoId} />
+			<VideoList details={filteredVideos} />
 		</>
 	);
 }

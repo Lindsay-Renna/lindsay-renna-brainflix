@@ -1,7 +1,7 @@
 import VideoItem from "../VideoItem/VideoItem";
 import "./VideoList.scss";
 
-function VideoList({ details, changeSelectedVideo }) {
+function VideoList({ details }) {
 	return (
 		<aside className="video-list">
 			<h4 className="video-list__header">NEXT VIDEOS</h4>
@@ -14,7 +14,6 @@ function VideoList({ details, changeSelectedVideo }) {
 							title={detail.title}
 							author={detail.channel}
 							imageUrl={detail.image}
-							changeSelectedVideo={changeSelectedVideo}
 						/>
 					);
 				})}

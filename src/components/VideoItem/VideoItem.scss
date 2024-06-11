@@ -15,6 +15,10 @@
 	img {
 		width: 35%;
 		border-radius: 5px;
+
+		@include desktop {
+			width: 33%;
+		}
 	}
 	.item-details {
 		display: flex;

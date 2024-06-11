@@ -1,25 +1,10 @@
-import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
-import videos from "./data/video-details.json";
-import { useState } from "react";
 import HomePage from "./pages/HomePage/HomePage";
 import UploadPage from "./pages/UploadPage/UploadPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
-	const [selectedVideo, setSelectedVideo] = useState(videos[0]);
-
-	function changeSelectedVideo(id) {
-		const foundVideo = videos.find((video) => {
-			return video.id === id;
-		});
-		setSelectedVideo(foundVideo);
-	}
-
-	const filteredVideos = videos.filter((detail) => {
-		return detail.id !== selectedVideo.id;
-	});
-
 	return (
 		<>
 			<BrowserRouter>

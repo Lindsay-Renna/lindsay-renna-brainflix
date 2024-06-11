@@ -5,7 +5,7 @@ function NewComments() {
 		<div className="new-comments">
 			<div className="user-image-container">
 				<img
-					src="src/assets/images/Mohan-muruge.jpg"
+					src="/src/assets/images/Mohan-muruge.jpg"
 					alt="Mohan Muruge"
 					className="user-image"
 				/>
@@ -22,7 +22,7 @@ function NewComments() {
 
 					<button>
 						<img
-							src="src/assets/images/icons/add_comment.svg"
+							src="/src/assets/images/icons/add_comment.svg"
 							alt="comment plus sign"
 						/>
 						<p>COMMENT</p>

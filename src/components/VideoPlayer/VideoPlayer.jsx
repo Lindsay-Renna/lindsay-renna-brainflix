@@ -1,6 +1,6 @@
 import "./VideoPlayer.scss";
 
-function VideoPlayer({ video, preview }) {
+function VideoPlayer({ preview }) {
 	return (
 		<div className="video-container">
 			<video controls poster={preview}>
