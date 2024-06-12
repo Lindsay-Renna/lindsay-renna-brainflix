@@ -31,17 +31,17 @@ function VideoUpload() {
 							placeholder="Add a description to your video"
 							className="upload__form__description"
 						></textarea>
+						<div className="upload__buttons">
+							<p className="cancel">CANCEL</p>
+							<button>
+								<img
+									src="src/assets/images/icons/publish.svg"
+									alt="upload arrow"
+								/>
+								<p>PUBLISH</p>
+							</button>
+						</div>
 					</form>
-					<div className="upload__buttons">
-						<p className="cancel">CANCEL</p>
-						<button>
-							<img
-								src="src/assets/images/icons/publish.svg"
-								alt="upload arrow"
-							/>
-							<p>PUBLISH</p>
-						</button>
-					</div>
 				</div>
 			</div>
 		</div>
