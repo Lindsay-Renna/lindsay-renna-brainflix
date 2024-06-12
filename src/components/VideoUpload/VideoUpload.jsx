@@ -1,6 +1,25 @@
 import "./VideoUpload.scss";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
 
 function VideoUpload() {
+	const [modalIsOpen, setModalIsOpen] = useState(false);
+	const navigate = useNavigate();
+
+	function handleUpload() {
+		// simulate the upload
+		setTimeout(() => {
+			setModalIsOpen(true);
+			setTimeout(() => {
+				setModalIsOpen(false);
+				navigate("/");
+			}, 2500);
+		}, 1000);
+	}
+
 	return (
 		<div className="upload">
 			<h1>Upload Video</h1>
@@ -34,7 +53,7 @@ function VideoUpload() {
 						></textarea>
 						<div className="upload__buttons">
 							<p className="cancel">CANCEL</p>
-							<button>
+							<button type="button" onClick={handleUpload}>
 								<img
 									src="src/assets/images/icons/publish.svg"
 									alt="upload arrow"
@@ -45,6 +64,29 @@ function VideoUpload() {
 					</form>
 				</div>
 			</div>
+			<Modal
+				isOpen={modalIsOpen}
+				onRequestClose={() => setModalIsOpen(false)}
+				contentLabel="Upload Success"
+				style={{
+					overlay: {
+						backgroundColor: "rgba(0, 0, 0, 0.75)",
+					},
+					content: {
+						top: "50%",
+						left: "50%",
+						right: "auto",
+						bottom: "auto",
+						marginRight: "-50%",
+						transform: "translate(-50%, -50%)",
+					},
+				}}
+			>
+				<div>
+					<h2>Success</h2>
+					<p>Upload successful! Redirecting to home page...</p>
+				</div>
+			</Modal>
 		</div>
 	);
 }
