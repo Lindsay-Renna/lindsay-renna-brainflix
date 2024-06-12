@@ -22,10 +22,15 @@ function HeaderNav() {
 						src="/src/assets/images/Mohan-muruge.jpg"
 						alt="user profile image"
 					/>
-					<div className="upload-button">
-						<img src="/src/assets/images/icons/upload.svg" alt="upload arrow" />
-						<p>UPLOAD</p>
-					</div>
+					<Link to="/upload-page" className="upload-button__link">
+						<div className="upload-button">
+							<img
+								src="/src/assets/images/icons/upload.svg"
+								alt="upload arrow"
+							/>
+							<p>UPLOAD</p>
+						</div>
+					</Link>
 				</div>
 			</nav>
 		</header>

@@ -43,10 +43,6 @@ header {
 				gap: 1.5rem;
 			}
 
-			@include desktop {
-				// gap: 0;
-			}
-
 			.user-image {
 				@include tablet {
 					order: 3;
@@ -70,6 +66,10 @@ header {
 
 				@include desktop {
 					margin-right: 0.875rem;
+				}
+
+				&__link {
+					min-width: 100%;
 				}
 
 				img {

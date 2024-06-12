@@ -23,16 +23,16 @@ form {
 			padding-left: 0.5rem;
 		}
 
-		.input {
+		input {
 			padding: 0.625rem;
 			border: none;
 			background-color: $SecondaryWhiteAlabaster;
 			color: $BrainFlixBlack;
 			font-family: "AvenirNext", Verdana, Geneva, Tahoma, sans-serif;
+			flex-grow: 1;
 
 			@include tablet {
 				min-height: 1.25rem;
-				flex-grow: 1;
 			}
 
 			&:focus {

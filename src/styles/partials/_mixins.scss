@@ -37,4 +37,30 @@
 	display: flex;
 	border-radius: 4px;
 	margin-top: 0.625rem;
+	border: none;
+
+	&:hover {
+		background-color: $BrainFlixDarkBlue;
+	}
+}
+
+@mixin form-inputs {
+	width: 100%;
+	resize: none;
+	font-family: "AvenirNext", Verdana, Geneva, Tahoma, sans-serif;
+	background-color: $SecondaryWhiteAlabaster;
+	border-color: $SecondaryGreyMercury;
+	border-radius: 4px;
+	&:focus {
+		border: 2px solid $BrainFlixBlue;
+		outline: none;
+	}
+
+	&:focus-visible {
+		border: 2px solid $BrainFlixBlue;
+	}
+
+	&::placeholder {
+		color: $BrainFlixBlack;
+	}
 }

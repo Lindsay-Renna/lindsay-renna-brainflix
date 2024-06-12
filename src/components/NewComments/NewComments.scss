@@ -58,32 +58,14 @@
 
 			textarea {
 				box-sizing: border-box;
-				width: 100%;
-				font-family: "AvenirNext";
-				min-height: 5rem;
-				background-color: $SecondaryWhiteAlabaster;
-				border-color: $SecondaryGreyMercury;
-				border-radius: 4px;
+				@include form-inputs;
 				padding: 0.5rem 0 0 0.5rem;
-				resize: none;
+				min-height: 5rem;
 
 				@include tablet {
 					min-height: 1rem;
 					max-height: 2.5rem;
 					padding: 0.75rem 0 0 0.5rem;
-				}
-
-				&:focus {
-					border: 2px solid $BrainFlixBlue;
-					outline: none;
-				}
-
-				&:focus-visible {
-					border: 2px solid $BrainFlixBlue;
-				}
-
-				&::placeholder {
-					color: $BrainFlixBlack;
 				}
 			}
 
@@ -107,7 +89,7 @@
 				p {
 					margin: 0;
 					flex-grow: 1;
-					font-family: "AvenirNext";
+					font-family: "AvenirNext", Verdana, Geneva, Tahoma, sans-serif;
 					width: 80%;
 					text-align: center;
 					font-weight: 600;

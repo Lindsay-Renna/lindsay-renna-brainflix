@@ -6,7 +6,7 @@ function VideoItem({ id, title, author, imageUrl }) {
 		<li>
 			<Link className="video-list__item" to={`/videos/${id}`}>
 				<img src={imageUrl} alt={`${title} video image`} />
-				<div className="item-details">
+				<div className="video-list__item__details">
 					<h5>{title}</h5>
 					<p>{author}</p>
 				</div>
