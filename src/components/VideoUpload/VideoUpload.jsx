@@ -6,8 +6,9 @@ function VideoUpload() {
 			<h1>Upload Video</h1>
 			<div className="upload__container">
 				<div className="upload__thumbnail">
-					<h3 className="upload__label">VIDEO THUMBNAIL</h3>
+					<h3 className="upload__thumbnail__label">VIDEO THUMBNAIL</h3>
 					<img
+						className="upload__thumbnail__image"
 						src="src/assets/images/Upload-video-preview.jpg"
 						alt="video preview"
 					/>

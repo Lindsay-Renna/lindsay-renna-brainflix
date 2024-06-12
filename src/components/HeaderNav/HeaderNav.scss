@@ -52,15 +52,18 @@ header {
 			}
 
 			.upload-button__link {
+				flex-grow: 1;
+				min-width: 90%;
+
 				@include tablet {
 					min-width: 10rem;
+					max-width: 10rem;
 				}
 			}
 
 			.upload-button {
 				@include blue-button;
 				min-width: 90%;
-				flex-grow: 2;
 				margin-top: 1rem;
 
 				@include tablet {
