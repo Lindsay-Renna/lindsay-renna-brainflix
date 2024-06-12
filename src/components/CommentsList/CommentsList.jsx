@@ -13,7 +13,7 @@ function CommentsList({ comments }) {
 			{comments.map((comment) => {
 				return (
 					<div className="comment" key={comment.id}>
-						<div className="comment__image--wrapper">
+						<div>
 							<div className="comment__image"></div>
 						</div>
 						<div className="comment__info">

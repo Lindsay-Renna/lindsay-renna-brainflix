@@ -7,7 +7,7 @@ function HeaderNav() {
 	return (
 		<header>
 			<nav>
-				<div className="image-wrapper">
+				<div className="header__image__wrapper">
 					<Link to="/">
 						<img
 							src="/src/assets/images/logo/BrainFlix-logo.svg"
@@ -15,7 +15,7 @@ function HeaderNav() {
 						/>
 					</Link>
 				</div>
-				<div className="search-bar-wrapper">
+				<div className="search-bar__wrapper">
 					<SearchBar />
 					<img
 						className="user-image"

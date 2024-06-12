@@ -15,7 +15,7 @@
 		gap: 1rem;
 	}
 
-	.user-image-container {
+	.user-image__container {
 		@include tablet {
 			display: flex;
 			align-items: flex-end;
@@ -35,7 +35,7 @@
 		}
 	}
 
-	.form-wrapper {
+	.form__wrapper {
 		flex-grow: 1;
 
 		@include tablet {
