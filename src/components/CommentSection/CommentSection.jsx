@@ -1,14 +1,10 @@
 import CommentsList from "../CommentsList/CommentsList";
 import NewComments from "../NewComments/NewComments";
 import "./CommentSection.scss";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function CommentSection({ comments, id }) {
 	const [commentList, setCommentList] = useState(comments);
-
-	useEffect(() => {
-		setCommentList(comments);
-	}, [comments]);
 
 	return (
 		<section className="comment-section">

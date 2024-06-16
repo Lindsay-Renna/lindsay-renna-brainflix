@@ -16,7 +16,7 @@ function HomePage() {
 			let result = await axios.get(getVideoListEndpoint());
 			setVideos(result.data);
 		} catch (error) {
-			console.log(error);
+			console.error(error);
 		}
 	}
 

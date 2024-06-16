@@ -3,7 +3,8 @@
 .error-wrapper {
 	@include flex-center-both;
 	flex-direction: column;
-	height: 50vw;
+	height: auto;
+	margin-top: 8rem;
 
 	img {
 		width: 20rem;

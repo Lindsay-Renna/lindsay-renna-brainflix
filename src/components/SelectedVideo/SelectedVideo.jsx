@@ -1,4 +1,3 @@
-import React from "react";
 import axios from "axios";
 import "./SelectedVideo.scss";
 import { getVideoEndpoint } from "../../utilities/api_util";
@@ -15,7 +14,7 @@ function VideoDetailsPage({ selectedVideoId }) {
 			let result = await axios.get(getVideoEndpoint(videoId));
 			setVideo(result.data);
 		} catch (error) {
-			console.log(error);
+			console.error(error);
 		}
 	}
 
