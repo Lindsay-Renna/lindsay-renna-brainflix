@@ -7,3 +7,9 @@ main {
 		margin-left: 5.75rem;
 	}
 }
+
+#video-details {
+	@include desktop {
+		border-right: 1px solid $SecondaryGreyMercury;
+	}
+}

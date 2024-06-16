@@ -44,6 +44,7 @@
 		&__info {
 			display: flex;
 			flex-wrap: wrap;
+			flex-grow: 1;
 
 			.comment__name {
 				width: 50%;
@@ -62,14 +63,31 @@
 				@include tablet {
 					padding-top: 0.25rem;
 					margin-bottom: 0;
+					width: 48%;
 				}
 			}
 
 			.comment__comment {
 				margin-top: 0;
+				width: 90%;
 
 				@include tablet {
 					margin-bottom: 1.25rem;
+				}
+			}
+
+			.delete-button__wrapper {
+				align-self: flex-end;
+				flex-grow: 1;
+				text-align: right;
+				cursor: pointer;
+
+				&:active {
+					opacity: 50%;
+				}
+
+				.delete-button {
+					padding-bottom: 0.5rem;
 				}
 			}
 		}

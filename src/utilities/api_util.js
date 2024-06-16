@@ -8,3 +8,11 @@ export function getVideoListEndpoint() {
 export function getVideoEndpoint(id) {
 	return API_URL + "videos/" + id + API_KEY;
 }
+
+export function postCommentEndpoint(id) {
+	return API_URL + "videos/" + id + "/comments" + API_KEY;
+}
+
+export function deleteCommentEndpoint(videoId, commentId) {
+	return API_URL + "videos/" + videoId + "/comments/" + commentId + API_KEY;
+}

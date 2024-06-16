@@ -31,7 +31,7 @@ function VideoDetailsPage({ selectedVideoId }) {
 		<>
 			<VideoPlayer preview={video.image} />
 			<main>
-				<section>
+				<section id="video-details">
 					<VideoDetails
 						title={video.title}
 						author={video.channel}
@@ -41,7 +41,7 @@ function VideoDetailsPage({ selectedVideoId }) {
 						commentCount={video.comments.length}
 						description={video.description}
 					/>
-					<CommentSection comments={video.comments} />
+					<CommentSection comments={video.comments} id={selectedVideoId} />
 				</section>
 			</main>
 		</>
