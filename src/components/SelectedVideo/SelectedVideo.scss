@@ -1,6 +1,8 @@
 @use "../../styles/partials/global" as *;
 
 #selected-video {
+	width: 100%;
+
 	@include desktop {
 		display: inline-flex;
 		width: 57.35%;
@@ -9,7 +11,7 @@
 }
 
 #video-details {
-	max-width: fit-content;
+	width: 100%;
 
 	@include desktop {
 		border-right: 1px solid $SecondaryGreyMercury;

@@ -21,8 +21,7 @@ function NewComments({ videoId, commentList, setCommentList }) {
 		};
 
 		const newCommentObj = await postComment(newComment);
-		const newCommentList = [...commentList, newCommentObj];
-		setCommentList(newCommentList);
+		setCommentList(newCommentObj);
 		event.target.reset();
 	}
 
