@@ -55,7 +55,7 @@ function VideoUpload() {
 				</div>
 				<div className="upload__details">
 					<form onSubmit={handleSubmit} className="upload__form">
-						<label htmlFor="">TITLE YOUR VIDEO</label>
+						<label htmlFor="title">TITLE YOUR VIDEO</label>
 						<textarea
 							type="text"
 							name="title"

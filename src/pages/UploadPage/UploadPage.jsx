@@ -3,10 +3,10 @@ import VideoUpload from "../../components/VideoUpload/VideoUpload";
 
 function UploadPage() {
 	return (
-		<div>
+		<main>
 			<HeaderNav />
 			<VideoUpload />
-		</div>
+		</main>
 	);
 }
 

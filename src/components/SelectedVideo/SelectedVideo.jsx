@@ -29,7 +29,7 @@ function VideoDetailsPage({ selectedVideoId }) {
 	return (
 		<>
 			<VideoPlayer preview={video.image} />
-			<main>
+			<main id="selected-video">
 				<section id="video-details">
 					<VideoDetails
 						title={video.title}

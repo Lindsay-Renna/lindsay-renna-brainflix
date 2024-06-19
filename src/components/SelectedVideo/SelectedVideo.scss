@@ -1,6 +1,6 @@
 @use "../../styles/partials/global" as *;
 
-main {
+#selected-video {
 	@include desktop {
 		display: inline-flex;
 		width: 57.35%;
