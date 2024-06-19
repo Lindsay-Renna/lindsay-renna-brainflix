@@ -9,7 +9,10 @@ main {
 }
 
 #video-details {
+	max-width: fit-content;
+
 	@include desktop {
 		border-right: 1px solid $SecondaryGreyMercury;
+		flex-grow: 1;
 	}
 }

@@ -68,11 +68,3 @@ ul {
 .user-image {
 	@include user-image;
 }
-
-main {
-	@include desktop {
-		display: flex;
-		width: 84.25%;
-		margin-left: 5.75rem;
-	}
-}

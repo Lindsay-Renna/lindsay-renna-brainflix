@@ -29,35 +29,43 @@ function CommentsList({ comments, videoId, setCommentList }) {
 
 	const sortedComments = comments.sort((a, b) => b.timestamp - a.timestamp);
 
-	return (
-		<div className="comments-list">
-			{sortedComments.map((comment) => {
-				return (
-					<div className="comment" key={comment.id}>
-						<div>
-							<div className="comment__image"></div>
-						</div>
-						<div className="comment__info">
-							<h4 className="comment__name">{comment.name}</h4>
-							<p className="comment__date">{formatDate(comment.timestamp)}</p>
-							<p className="comment__comment">{comment.comment}</p>
-							<div
-								onClick={handleDelete}
-								id={comment.id}
-								className="delete-button__wrapper"
-							>
-								<img
-									className="delete-button"
-									src="/src/assets/images/icons/icon-delete.svg"
-									alt="delete button"
-								/>
+	if (comments.length === 0) {
+		return (
+			<div className="comments-list">
+				<h3 className="empty-header">There are no comments for this video</h3>{" "}
+			</div>
+		);
+	} else {
+		return (
+			<div className="comments-list">
+				{sortedComments.map((comment) => {
+					return (
+						<div className="comment" key={comment.id}>
+							<div>
+								<div className="comment__image"></div>
+							</div>
+							<div className="comment__info">
+								<h4 className="comment__name">{comment.name}</h4>
+								<p className="comment__date">{formatDate(comment.timestamp)}</p>
+								<p className="comment__comment">{comment.comment}</p>
+								<div
+									onClick={handleDelete}
+									id={comment.id}
+									className="delete-button__wrapper"
+								>
+									<img
+										className="delete-button"
+										src="/src/assets/images/icons/icon-delete.svg"
+										alt="delete button"
+									/>
+								</div>
 							</div>
 						</div>
-					</div>
-				);
-			})}
-		</div>
-	);
+					);
+				})}
+			</div>
+		);
+	}
 }
 
 export default CommentsList;

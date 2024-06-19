@@ -2,12 +2,33 @@ import "./VideoUpload.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Modal from "react-modal";
+import axios from "axios";
 
 Modal.setAppElement("#root");
+const API_URL = import.meta.env.VITE_API_URL;
 
 function VideoUpload() {
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 	const navigate = useNavigate();
+
+	async function handleSubmit(event) {
+		event.preventDefault();
+
+		const newVideo = {
+			title: event.target.title.value,
+			channel: "Mohan Murugue",
+			image: "http://localhost:8080/images/Upload-video-preview.jpg",
+			description: event.target.description.value,
+			timestamp: event.timeStamp,
+		};
+
+		try {
+			const result = await axios.post(API_URL + "/videos", newVideo);
+		} catch (error) {
+			console.error(error);
+		}
+		handleUpload();
+	}
 
 	function handleUpload() {
 		// simulate the upload
@@ -33,7 +54,7 @@ function VideoUpload() {
 					/>
 				</div>
 				<div className="upload__details">
-					<form className="upload__form">
+					<form onSubmit={handleSubmit} className="upload__form">
 						<label htmlFor="">TITLE YOUR VIDEO</label>
 						<textarea
 							type="text"
@@ -53,7 +74,7 @@ function VideoUpload() {
 						></textarea>
 						<div className="upload__buttons">
 							<p className="cancel">CANCEL</p>
-							<button type="button" onClick={handleUpload}>
+							<button type="submit">
 								<img
 									src="src/assets/images/icons/publish.svg"
 									alt="upload arrow"

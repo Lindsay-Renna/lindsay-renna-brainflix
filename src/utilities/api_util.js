@@ -1,18 +1,17 @@
-const API_URL = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
-const API_KEY = "?api_key=a977011a-4c17-4e43-854f-6cba5ca74060";
+const API_URL = "http://localhost:8080/";
 
 export function getVideoListEndpoint() {
-	return API_URL + "videos" + API_KEY;
+	return API_URL + "videos";
 }
 
 export function getVideoEndpoint(id) {
-	return API_URL + "videos/" + id + API_KEY;
+	return API_URL + "videos/" + id;
 }
 
 export function postCommentEndpoint(id) {
-	return API_URL + "videos/" + id + "/comments" + API_KEY;
+	return API_URL + "videos/" + id + "/comments";
 }
 
 export function deleteCommentEndpoint(videoId, commentId) {
-	return API_URL + "videos/" + videoId + "/comments/" + commentId + API_KEY;
+	return API_URL + "videos/" + videoId + "/comments/" + commentId;
 }
