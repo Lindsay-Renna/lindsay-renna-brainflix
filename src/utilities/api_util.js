@@ -15,3 +15,7 @@ export function postCommentEndpoint(id) {
 export function deleteCommentEndpoint(videoId, commentId) {
 	return API_URL + "videos/" + videoId + "/comments/" + commentId;
 }
+
+export function putLikesEndpoint(id) {
+	return API_URL + "videos/" + id + "/likes";
+}

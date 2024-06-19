@@ -1,6 +1,6 @@
 import axios from "axios";
 import "./SelectedVideo.scss";
-import { getVideoEndpoint } from "../../utilities/api_util";
+import { getVideoEndpoint, putLikesEndpoint } from "../../utilities/api_util";
 import { useState, useEffect } from "react";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import VideoDetails from "../VideoDetails/VideoDetails";
@@ -8,11 +8,22 @@ import CommentSection from "../CommentSection/CommentSection";
 
 function VideoDetailsPage({ selectedVideoId }) {
 	const [video, setVideo] = useState(null);
+	const [likes, setLikes] = useState(0);
 
 	async function getSelectedVideo(videoId) {
 		try {
 			let result = await axios.get(getVideoEndpoint(videoId));
 			setVideo(result.data);
+			setLikes(result.data.likes);
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
+	async function addLikes(videoId) {
+		try {
+			await axios.put(putLikesEndpoint(videoId));
+			setLikes((prevLikes) => prevLikes + 1);
 		} catch (error) {
 			console.error(error);
 		}
@@ -35,10 +46,12 @@ function VideoDetailsPage({ selectedVideoId }) {
 						title={video.title}
 						author={video.channel}
 						viewCount={video.views}
-						likeCount={video.likes}
+						likeCount={likes}
 						timestamp={video.timestamp}
 						commentCount={video.comments.length}
 						description={video.description}
+						id={video.id}
+						addLikes={addLikes}
 					/>
 					<CommentSection comments={video.comments} id={selectedVideoId} />
 				</section>

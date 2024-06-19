@@ -2,7 +2,7 @@ import "./NewComments.scss";
 import axios from "axios";
 import { postCommentEndpoint } from "../../utilities/api_util.js";
 
-function NewComments({ videoId, commentList, setCommentList }) {
+function NewComments({ videoId, setCommentList }) {
 	async function postComment(comment) {
 		try {
 			const res = await axios.post(postCommentEndpoint(videoId), comment);

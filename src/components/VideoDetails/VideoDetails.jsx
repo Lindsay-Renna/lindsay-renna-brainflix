@@ -15,6 +15,8 @@ function VideoDetails({
 	timestamp,
 	commentCount,
 	description,
+	addLikes,
+	id,
 }) {
 	return (
 		<div className="video-details">
@@ -35,9 +37,15 @@ function VideoDetails({
 
 					<div className="likes-wrapper">
 						<div className="image-wrapper">
-							<img src="/src/assets/images/icons/likes.svg" alt="like icon" />
+							<img
+								onClick={() => addLikes(id)}
+								src="/src/assets/images/icons/likes.svg"
+								alt="like icon"
+								className="like-button"
+							/>
 						</div>
-						<div className="like-count">{likeCount}</div>
+
+						<div className="like-count">{likeCount.toLocaleString()}</div>
 					</div>
 				</div>
 			</div>

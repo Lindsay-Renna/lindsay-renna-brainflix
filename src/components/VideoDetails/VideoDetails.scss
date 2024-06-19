@@ -101,3 +101,13 @@
 		font-weight: 700;
 	}
 }
+
+.like-button {
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:active {
+		opacity: 50%;
+	}
+}
