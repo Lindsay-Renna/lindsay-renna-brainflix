@@ -11,7 +11,6 @@ function App() {
 				<Routes>
 					<Route path="/" element={<HomePage />} />
 					<Route path="/videos/:videoId" element={<HomePage />} />
-					<Route path="/videos/:videoId/likes" element={<HomePage />} />
 					<Route path="/upload-page" element={<UploadPage />} />
 					<Route path="/*" element={<NotFoundPage />} />
 				</Routes>

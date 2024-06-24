@@ -1,6 +1,6 @@
 import "./VideoUpload.scss";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 import axios from "axios";
 
@@ -73,7 +73,9 @@ function VideoUpload() {
 							className="upload__form__description"
 						></textarea>
 						<div className="upload__buttons">
-							<p className="cancel">CANCEL</p>
+							<Link to="/">
+								<p className="cancel">CANCEL</p>
+							</Link>
 							<button type="submit">
 								<img
 									src="src/assets/images/icons/publish.svg"
